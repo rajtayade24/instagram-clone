@@ -222,7 +222,17 @@ function ReelSection() {
               </div>
 
               {commented[index] && ( //In JavaScript, A && B means: If A is truthy → return B.
-                <CommentSection video={item.video} emogi={emogi} username={videos[index].username} handleComment={handleComment} index={index} />
+                <CommentSection
+                  video={item.video}
+                  username={videos[index].username}
+                  index={index}
+                  sounded={sounded}
+                  handleComment={handleComment}
+                  handleSound={handleSound}
+                  emogi={emogi}
+                  sound={sounded ? sound : soundMuted}
+
+                />
               )}
             </React.Fragment>
           ))}
