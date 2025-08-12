@@ -6,18 +6,18 @@ export default function CommentSection(props) {
     <div className='comment-section fixed w-[100vw] h-[100vh] top-0 right-0 z-50 flex flex-wrap justify-center items-center bg-black/50'>
       <div className='comments-container w-auto h-[calc(100%-40px)] max-w-[calc(100% - 120px)] flex justify-center items-center opacity-100 '>
 
-        <div className='relative left flex-1 h-[100%] w-[fit-content] min-w-0 bg-black flex items-center max-[660px]:hidden'>
+        <div className='left relative flex-1 h-[100%] w-[fit-content] min-w-0 bg-black flex items-center max-[660px]:hidden'>
           <video
             className="w-full h-auto max-w-[450px] max-h-[100%] mx-auto my-auto"
             loop autoPlay
-            muted
+            muted 
             src={props.video}>
           </video>
           <span
             className='absolute sound w-10 h-10 bottom-5 right-5 rounded-full bg-gray-700 flex justify-center items-center p-2.5'
             onClick={() => props.handleSound(props.index)}
           >
-            <img className='invert h-full' src={props.sound} alt="" />
+            <img className='invert h-full' src={props.sounded ? props.sound : props.soundMuted} alt="" />
           </span>
         </div>
 

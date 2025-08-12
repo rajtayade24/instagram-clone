@@ -230,7 +230,8 @@ function ReelSection() {
                   handleComment={handleComment}
                   handleSound={handleSound}
                   emogi={emogi}
-                  sound={sounded ? sound : soundMuted}
+                  sound={sound}
+                  soundMuted={soundMuted}
 
                 />
               )}
